@@ -53,3 +53,7 @@ Route::get('/card', function () {
 Auth::routes();
 
 Route::get('/index', 'HomeController@index')->name('pages.index');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

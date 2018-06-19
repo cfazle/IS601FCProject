@@ -52,4 +52,4 @@ Route::get('/card', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('pages.home');
+Route::get('/index', 'HomeController@index')->name('pages.index');

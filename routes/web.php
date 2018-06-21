@@ -11,37 +11,35 @@
 |
 */
 
-Route::get('/', function () {
-    return view('pages.index');
-});
+Route::get('/', 'HomeController@home')->name("index");
 
-Route::get('/about', function () {
-    return view('pages.about');
-});
+Route::get('/about','HomeController@about' )->name("about");
 
 
-Route::get('/contact', function () {
-    return view('pages.contact');
-});
+Route::get('/contact','HomeController@contact' )->name("contact");
 
-Route::post('/contact', function () {
+Route::post('/contact','HomeController@store' )->name("contact.store");
+
+Route::get('/thanks{name}', 'HomeController@thanks' )->name("thanks");
+
+/*Route::post('/contact', function () {
     $data = request() ->all();
     echo "Email: ".$data['email'].'<br>';
     echo "Message: ".$data['message'];
-});
+}); */
 
-Route::get('/signup', function () {
+/*Route::get('/signup', function () {
     return view('pages.signup');
 });
 
 Route::get('/signin', function () {
     return view('pages.signin');
-});
+});*/
 
 Route::get('/viewmessages', function () {
     return view('pages.viewmessages');
 });
-
+/*
 Route::get('/logout', function () {
     return view('pages.logout');
 });
@@ -49,6 +47,8 @@ Route::get('/logout', function () {
 Route::get('/card', function () {
     return view('pages.card');
 });
+
+*/
 
 Auth::routes();
 

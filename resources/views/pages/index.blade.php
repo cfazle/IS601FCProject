@@ -1,6 +1,6 @@
 @extends('layouts.default')
 @section('content')
-    <html lang="{{ app()->getLocale() }}">
+
         <br></br>
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
@@ -82,11 +82,9 @@
 
         </div><!-- /.container -->
 
-
-
         <p class="float-right"><a href="#">Back to top</a></p>
 
-    </html>
+
 
 
 

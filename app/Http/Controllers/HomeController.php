@@ -6,23 +6,26 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        $this->middleware('auth');
+    function home() {
+        return view('pages.index');
     }
 
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        return view('pages.home');
+    function about () {
+        return view('pages.about');
+    }
+
+    function contact () {
+        return view('pages.contact');
+    }
+
+    function store(Request $request){
+
+        $name = $request ->name;
+        return redirect()->route('thanks',['name'=>$name]);
+    }
+
+    function thanks($name, Request $request){
+
+        return view('pages.thankyou')->with(compact('name'));
     }
 }

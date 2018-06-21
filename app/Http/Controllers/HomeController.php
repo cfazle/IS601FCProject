@@ -18,6 +18,10 @@ class HomeController extends Controller
         return view('pages.contact');
     }
 
+    function  message() {
+        return view('pages.viewmessages');
+    }
+
     function store(Request $request){
 
         $name = $request ->name;

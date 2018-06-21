@@ -1,10 +1,12 @@
 @extends("layouts.default")
 @section('content')
-
+    <br>
     <h1>Contact</h1>
     <p class="lead">Please use this form to contact the site owner.</p>
 
-    <form action="/contact" method="post" action="{{route('contact.store')}}>
+ <!--   <form action="/contact" method="post" action="{{route('contact.store')}}> -->
+
+    <form role ="form" id="contact-form" class="contact-form" method="post" action="{{route('contact.store')}}">
         {{csrf_field()}}
         <div class="form-group">
        <!--     <label for="email">Email address</label> -->

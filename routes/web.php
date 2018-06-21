@@ -36,9 +36,7 @@ Route::get('/signin', function () {
     return view('pages.signin');
 });*/
 
-Route::get('/viewmessages', function () {
-    return view('pages.viewmessages');
-});
+Route::get('/viewmessages', 'HomeController@message')->name("message");
 /*
 Route::get('/logout', function () {
     return view('pages.logout');

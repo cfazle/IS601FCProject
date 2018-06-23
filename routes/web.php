@@ -11,16 +11,15 @@
 |
 */
 
-Route::get('/', 'HomeController@home')->name("index");
-
-Route::get('/about','HomeController@about' )->name("about");
+Route::get('/', 'HomeController@home')->name('index');
 
 
-Route::get('/contact','HomeController@contact' )->name("contact");
+Route::get('/about', 'HomeController@about')->name('about');
 
-Route::post('/contact','HomeController@store' )->name("contact.store");
 
-Route::get('/thanks{name}', 'HomeController@thanks' )->name("thanks");
+Route::get('/contact', 'HomeController@contact')->name('contact');
+Route::post('/contact', 'HomeController@store')->name('contact.store');
+Route::get('/thanks/{name}', 'HomeController@thanks')->name('thanks');
 
 /*Route::post('/contact', function () {
     $data = request() ->all();
@@ -28,29 +27,25 @@ Route::get('/thanks{name}', 'HomeController@thanks' )->name("thanks");
     echo "Message: ".$data['message'];
 }); */
 
-/*Route::get('/signup', function () {
-    return view('pages.signup');
+
+
+Route::get('/viewmessages', function () {
+    return view('pages.viewmessages');
 });
 
-Route::get('/signin', function () {
-    return view('pages.signin');
-});*/
 
-Route::get('/viewmessages', 'HomeController@message')->name("message");
-/*
-Route::get('/logout', function () {
-    return view('pages.logout');
-});
 
 Route::get('/card', function () {
     return view('pages.card');
 });
 
-*/
+/*Auth::routes();
 
-Auth::routes();
+Route::get('/index', 'HomeController@index')->name('index'); */
 
-Route::get('/index', 'HomeController@index')->name('pages.index');
+/*Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home'); */
 
 Auth::routes();
 

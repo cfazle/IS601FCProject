@@ -4,20 +4,20 @@
     <h1>Contact</h1>
     <p class="lead">Please use this form to contact the site owner.</p>
 
- <!--   <form action="/contact" method="post" action="{{route('contact.store')}}> -->
 
-    <form role ="form" id="contact-form" class="contact-form" method="post" action="{{route('contact.store')}}">
-        {{csrf_field()}}
+
+ <!--   <form role ="form" id="contact-form" class="contact-form" method="post" action="">
+
         <div class="form-group">
        <!--     <label for="email">Email address</label> -->
       <!--      <input name="email" type="email" class="form-control" id="email" placeholder="name@example.com"> -->
-            <input type="text" class="form-control" name="name" autocomplete="off" id="name" placeholder="Name">
+  <!--          <input type="text" class="form-control" name="name" autocomplete="off" id="name" placeholder="Name">
         </div>
 
     <div class="form-group">
       <!--  <label for="email">Email address</label> -->
         <!--      <input name="email" type="email" class="form-control" id="email" placeholder="name@example.com"> -->
-        <input type="email" class="form-control" name="email" autocomplete="off" id="email" placeholder="E-mail">
+   <!--     <input type="email" class="form-control" name="email" autocomplete="off" id="email" placeholder="E-mail">
     </div>
         <div class="form-group">
             <label for="message">Message</label>
@@ -25,22 +25,22 @@
         </div>
         <button type="submit" class="btn btn-primary mb-2">Submit</button>
 
-    </form>
+    </form> -->
 
- <!--  <form role ="form" id="contact-form" class="contact-form" method="post" action="{{route('contact.store')}}">
-       {{csrf_field()}}
+ <form role ="form" id="contact-form" class="contact-form" method="post" action="{{route('contact.store')}}">
+     {{csrf_field()}}
        <div class="row">
            <div class="col-md-6">
                <div class="form-group">
                    <!--  <label for="email">Email address</label> -->
-   <!--                <input type="text" class="form-control" name="name" autocomplete="off" id="name" placeholder="Name">
+                <input type="text" class="form-control" name="name" autocomplete="off" id="name" placeholder="Name">
                </div>
            </div>
 
            <div class="col-md-6">
                <div class="form-group">
                    <!--  <label for="email">Email address</label> -->
-    <!--               <input type="email" class="form-control" name="email" autocomplete="off" id="email" placeholder="E-mail">
+                <input type="email" class="form-control" name="email" autocomplete="off" id="email" placeholder="E-mail">
                </div>
            </div>
        </div>
@@ -49,7 +49,7 @@
            <div class="col-md-12">
                <div class="form-group">
                    <!--  <label for="email">Email address</label> -->
-     <!--              <textarea  class="form-control-textarea" rows="3" name="message"  id="message" placeholder="Message"></textarea>
+                <textarea  class="form-control-textarea" rows="3" name="message"  id="message" placeholder="Message"></textarea>
                </div>
            </div>
        </div>
@@ -59,5 +59,6 @@
                <button type="submit" class="btn main-btn pull-right">Send a message</button>
            </div>
        </div>
+ </form>
 
 @endsection

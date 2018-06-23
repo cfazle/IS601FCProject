@@ -16,11 +16,8 @@ class HomeController extends Controller
 
     function contact () {
         return view('pages.contact');
-    }
 
-    function  message() {
-        return view('pages.viewmessages');
-    }
+           }
 
     function store(Request $request){
 
@@ -32,4 +29,31 @@ class HomeController extends Controller
 
         return view('pages.thankyou')->with(compact('name'));
     }
+
+    function  message() {
+        return view('pages.viewmessages');
+    }
+
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+/*    public function __construct()
+    {
+        $this->middleware('auth');
+    } */
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
+        return view('home');
+    }
+
+
+
 }
